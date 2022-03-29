@@ -11,6 +11,10 @@ SetKeyDelay -1
 SetMouseDelay -1
 SetBatchLines -1
 
+F12::
+Reload
+Return
+
 F11::
 WinActivate, ELDEN RING™ ahk_class ELDEN RING™
 Sleep, 333
