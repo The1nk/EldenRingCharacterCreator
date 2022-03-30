@@ -12,7 +12,9 @@ SetMouseDelay -1
 SetBatchLines -1
 
 F12::
+MsgBox, , Reloading, Reloading, 5000
 Reload
+MsgBox, , FAIL, FAIL, 5000
 Return
 
 F11::
@@ -221,5 +223,62 @@ Sleep, 120
 Send, {Escape Down}
 Sleep, 120
 Send, {Escape Up}
+Sleep, 14000
+
+; Walk forward ... ?
+Send, {W Down}
+Sleep, 2550
+Send, {W Up}{Numpad6 Down} ; Turn ~90 degrees right
+Sleep, 515
+Send, {Numpad6 Up}{W Down} ; Stop turning, begin walking forward again
+Sleep, 1500
+Send, {W Up}{E Down} ; Stop, finger time!
 Sleep, 120
+Send, {E Up}{Numpad4 Down} ; Turn ~180 degrees left
+Sleep, 800
+Send, {Numpad4 Up}{W Down} ; Walk back to center
+Sleep, 1500
+Send, {W Up}{Numpad6 Down} ; Face the door
+Sleep, 470
+Send, {Numpad6 Up}{W Down} ; Walk!
+Sleep, 2400
+Send, {W Up}{E Down}
+Sleep, 120
+Send, {E Up}
+Sleep, 120
+Send, {E Down}
+Sleep, 200
+Send, {E Up}
+Sleep, 10000
+Send, {Q Down}
+Sleep, 120
+Send, {Q Up}
+Sleep, 30
+Send, {E Down}{Click Down}
+Sleep, 120
+Send, {Click Up}{E Up}
+Sleep, 120
+Send, {E Up}{W Down}
+Sleep, 600
+Send, {W Up}{Numpad4 Down}
+Sleep, 400
+Send, {Numpad4 Up}{W Down}
+Sleep, 2000
+Send, {F Down}
+Sleep, 200
+Send, {F Up}{W Up}{Numpad4 Down}
+Sleep, 200
+Send, {Numpad4 Up}{W Down}
+Sleep, 3000
+Send, {F Down}
+Sleep, 120
+Send, {F Up}
+Sleep 2500
+Send, {W Up}
+Sleep, 200
+; Send, {Numpad6 Down}
+; Sleep, 300
+; Send, {Numpad6 Up}
+; Sleep, 200
+MsgBox, , Done, Done, 1000
 Return
